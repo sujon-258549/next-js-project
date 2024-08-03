@@ -1,6 +1,22 @@
+"use client"
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 export default function Navber() {
+    const navber =[
+        {
+            title: 'Home',
+            path: "/"
+        },
+        {
+            title: 'About',
+            path: "/about"
+        }
+    ]
+
+    const patName = usePathname();
     return (
         <div>
             <header className="sticky inset-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-lg">
@@ -17,15 +33,9 @@ export default function Navber() {
                         </a>
                     </div>
                     <ul className="hidden items-center justify-center gap-6 md:flex">
-                        <li className="pt-1.5 font-dm text-sm font-medium text-slate-700">
-                            <a href="#">Pricing</a>
-                        </li>
-                        <li className="pt-1.5 font-dm text-sm font-medium text-slate-700">
-                            <a href="#">Blog</a>
-                        </li>
-                        <li className="pt-1.5 font-dm text-sm font-medium text-slate-700">
-                            <a href="#">Docs</a>
-                        </li>
+                       {
+                        navber.map(link =>  <Link className={`${patName === link.path ? 'py-2.5 px-6 rounded-lg text-sm font-medium text-white bg-teal-600' : "py-2.5 px-6 rounded-lg text-sm font-medium bg-teal-200 text-teal-800"}`} href={link.path}>{link.title}</Link>)
+                       }
                     </ul>
                     <div className="flex-grow" />
                     <div className="hidden items-center justify-center gap-6 md:flex">
