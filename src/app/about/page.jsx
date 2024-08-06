@@ -1,11 +1,10 @@
-import React from 'react'
-
-const componentName = () => {
+import Aboutjson  from "@/Component/Aboutjson"; 
+const ComponentName = () => {
     return (
-        <div>
-            This is about
+        <div className="w-[90%] mx-auto">
+            <Aboutjson />
         </div>
-    )
-}
+    );
+};
 
-export default componentName
+export default ComponentName;
