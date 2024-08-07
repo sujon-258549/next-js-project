@@ -3,6 +3,7 @@ import Gallery from "@/Component/Gallery";
 
 
 export default function Home() {
+
   return (
    <>
    <Banner></Banner>
