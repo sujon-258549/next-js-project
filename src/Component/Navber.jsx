@@ -13,10 +13,20 @@ export default function Navber() {
         {
             title: 'About',
             path: "/about"
+        },
+        {
+            title: 'Category',
+            path: "/category"
         }
     ]
 
     const patName = usePathname();
+    if(patName.includes('dashboard'))
+        return(
+            <div className='bg-green-500 p-5'>
+            This is basboard
+        </div>
+        )
     return (
         <div>
             <header className="sticky inset-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-lg">
