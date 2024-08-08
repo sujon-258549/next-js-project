@@ -17,6 +17,10 @@ export default function Navber() {
         {
             title: 'Category',
             path: "/category"
+        },
+        {
+            title: 'Meals',
+            path: "/meals"
         }
     ]
 
