@@ -1,7 +1,16 @@
 import Mealse from '@/Component/Mealse';
-import React from 'react';
+
+export const  metadata = {
+    title: "Meals | Next hero Project",
+    discription: "This is secure"
+}
+
+
+
 
 const Page = () => {
+
+
     return (
         <div>
             <div className="dark:bg-gray-800">

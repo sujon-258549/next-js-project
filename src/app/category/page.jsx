@@ -1,5 +1,11 @@
 import Link from "next/link"
 
+export const  metadata = {
+  title: "Cetagoris | Next hero Project",
+  discription: "This is secure"
+}
+
+
 const getTodo = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
   const data = await res.json()
