@@ -7,10 +7,11 @@ export const  metadata = {
 
 
 const getTodo = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const res = await fetch(`${process.env.CATEGORY_URL}/posts`)
   const data = await res.json()
   return data
 }
+
 
 const page = async () => {
 
